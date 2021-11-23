@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import ProductCard from "../components/ProductCard"
 
 function ProductIndex({getProducts, products}){
-    useEffect(() => products.length === 0 && getProducts(), [products])
+    useEffect(getProducts, [getProducts])
     
 
  return <div className="cards">
