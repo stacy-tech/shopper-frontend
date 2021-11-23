@@ -1,12 +1,15 @@
 import { useEffect } from "react"
 import {getProducts} from '../redux/actionCreators'
 import { connect } from 'react-redux'
+import ProductCard from "../components/ProductCard"
 
 function ProductIndex({getProducts, products}){
     useEffect(() => products.length === 0 && getProducts(), [products])
     
 
- return<h1>Products</h1>
+ return <div className="cards">
+     {products.map(product => <ProductCard {...product} key={product.id} />)}
+ </div>
 }
 
 const mapStateToProps = (state) => {
