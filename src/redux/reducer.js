@@ -2,7 +2,7 @@ const initialState = {
     products: []
 }
 
-export default function reducer(state=initialState, action){
+export function reducer(state=initialState, action){
     switch (action.type){
         case "GET_PRODUCTS":
             return {...state, products: action.payload};
