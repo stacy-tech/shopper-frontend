@@ -8,7 +8,8 @@ function App() {
     <>
       <h1>Welcome to Shopper</h1>
       <Switch>
-        <ProductIndex/>
+        <Route path="/products/:id"><ProductShow/></Route>
+        <Route path="/products"><ProductIndex/></Route>
       </Switch>
     </>
   );
