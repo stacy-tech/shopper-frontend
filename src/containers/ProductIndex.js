@@ -8,7 +8,7 @@ function ProductIndex({getProducts, products}){
     
 
  return <div className="cards">
-     {products.map(product => <ProductCard {...product} key={product.id} />)}
+     {products.map(product => <ProductCard {...product} key={product.id}/>)}
  </div>
 }
 

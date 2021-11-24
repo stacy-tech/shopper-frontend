@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ProductIndex from './containers/ProductIndex';
+import ProductShow from './components/ProductShow'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
