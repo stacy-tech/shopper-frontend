@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import {getProducts} from '../redux/actionCreators'
 import { connect } from 'react-redux'
-import ProductCard from "../components/ProductCard"
+import { ProductCard }from "../components"
 
 function ProductIndex({getProducts, products}){
     useEffect(getProducts, [getProducts])
