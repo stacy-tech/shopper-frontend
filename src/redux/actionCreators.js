@@ -8,7 +8,7 @@ export const getProducts = () => {
 
 // fetch request for my show action
 export const getProduct = (id) => {
-    return dispatch => fetch(`http://localhost:3000/products${id}`)
+    return dispatch => fetch(`http://localhost:3000/products/${id}`)
     .then(res => res.json())
     .then(product => dispatch({type: "GET_PRODUCT", payload: product}))   
 }
