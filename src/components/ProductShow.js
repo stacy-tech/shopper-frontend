@@ -4,16 +4,23 @@ import { getProduct } from '../redux/actionCreators'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-function ProductShow({getProduct}){
+function ProductShow({getProduct, title, imageUrl, description, price}){
     const routeId = useParams().id
     useEffect(() => {
         getProduct(routeId)
-    },     [getProduct, routeId])
+    },   [getProduct, routeId])
     
-    return  <div>
-        <h1>You're in the show page</h1>
+    return  <div className="show">
+        <img src={imageUrl} alt={title}/>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <h3>${price}</h3>
         <Link to={`/products/${parseInt(routeId) + 1}`}>Next</Link>
     </div>
 }
 
-export default connect(null, {getProduct})(ProductShow)
+const mapStateToProps = (state) => {
+    return {...state.selectedProduct}
+}
+
+export default connect(mapStateToProps, {getProduct})(ProductShow)
