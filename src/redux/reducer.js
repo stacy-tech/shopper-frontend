@@ -1,12 +1,17 @@
 const initialState = {
-    products: [], 
+    products: [],
     selectedProduct: {
         title: "",
         imageUrl: "",
         description: "",
         price: 0
+    },
+    user: {
+        username: ""
     }
 }
+
+
 
 export function reducer(state=initialState, action){
     switch (action.type){

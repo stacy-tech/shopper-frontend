@@ -1,8 +1,10 @@
 import './App.css';
 import { ProductIndex, ProductShow, Nav } from './components'
 import { Switch, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-function App() {
+function App(props) {
+  console.log(props)
   return (
     <>
       <h1>SHOPPER</h1>
@@ -10,9 +12,14 @@ function App() {
       <Switch>
         <Route path="/products/:id"><ProductShow/></Route>
         <Route path="/products"><ProductIndex/></Route>
+        <Route exact path="/"><ProductIndex/></Route>
       </Switch>
+      { props.user.username }
+      <Auth/>
     </>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({user: state.user})
+
+export default connect(mapStateToProps)(App);
