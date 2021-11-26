@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+nav {
+  text-align: center
+}
+
 h1 {
   color: black;
   text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
@@ -38,7 +42,7 @@ h3 {
   border-radius: 5px;
   width: 300px;
   height: 200px;
-  object-position: 10px center
+  object-position: 10px center 
 }
 
 a {
@@ -46,7 +50,8 @@ a {
   padding-bottom: 10px;
   bottom: 0px;
   right: 0px;
-  margin: 0px;
+  margin: 50px;
+  
 }  
 
 
