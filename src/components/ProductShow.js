@@ -11,8 +11,8 @@ function ProductShow({getProduct, title, imageUrl, description, price}){
     },   [getProduct, routeId])
     
     return  <div className="show">
-        <img src={imageUrl} alt={title}/>
         <h1>{title}</h1>
+        <img src={imageUrl} alt={title}/>
         <p>{description}</p>
         <h3>${price}</h3>
         <Link to={`/products/${parseInt(routeId) + 1}`}>Next</Link>
