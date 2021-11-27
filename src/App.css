@@ -1,6 +1,13 @@
-.App {
+body {
   text-align: center;
+  color: white;
+  background-color: black;
+  font-family: sans-serif;
 }
+
+/* .App {
+  text-align: center;
+} */
 
 nav {
   text-align: center

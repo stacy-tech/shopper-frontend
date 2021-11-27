@@ -1,5 +1,5 @@
 import './App.css';
-import { ProductIndex, ProductShow, Nav } from './components'
+import { ProductIndex, ProductShow, Nav, Auth } from './components'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -9,13 +9,14 @@ function App(props) {
     <>
       <h1>SHOPPER</h1>
       <Nav/>
-      <Switch>
-        <Route path="/products/:id"><ProductShow/></Route>
-        <Route path="/products"><ProductIndex/></Route>
-        <Route exact path="/"><ProductIndex/></Route>
-      </Switch>
-      { props.user.username }
-      <Auth/>
+      { props.user.username ?
+        <Switch>
+          <Route path="/products/:id"><ProductShow/></Route>
+          <Route path="/products"><ProductIndex/></Route>
+          <Route exact path="/"><ProductIndex/></Route>
+        </Switch>:
+        <Auth/>
+      }
     </>
   );
 }
