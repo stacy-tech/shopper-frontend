@@ -5,6 +5,11 @@ body {
   font-family: sans-serif;
 }
 
+input {
+  display: block;
+  margin: .5em auto;
+}
+
 /* .App {
   text-align: center;
 } */
