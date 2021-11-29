@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { submitSignup } from '../redux/actionCreators'
+import { connect } from 'react-redux'
 
 function Auth(props){
     const [signup, setSignup] =  useState(false)
@@ -8,7 +10,7 @@ function Auth(props){
     const [password, setPassword] = useState("")
     
     const toggleSignup = () => setSignup(!signup)
-
+    console.log(props)
     return <>
         {signup ? <h1>Sign up!</h1> :<h1>Login</h1>}
         <form>
@@ -35,4 +37,4 @@ function Auth(props){
     
 }
 
-export default Auth
+export default connect(null, {submitSignup})(Auth)
