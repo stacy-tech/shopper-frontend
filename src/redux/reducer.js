@@ -19,8 +19,12 @@ export function reducer(state=initialState, action){
             return {...state, products: action.payload};
         case "GET_PRODUCT":
             return {...state, selectedProduct: action.payload}
+        case "SET_USER":
+            return {...state, user: action.payload}
         default:
             return {...state}
+        
+        
     }
     
 }

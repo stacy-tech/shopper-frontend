@@ -23,7 +23,7 @@ export const submitSignup = (user) => {
         body: JSON.stringify(user),
     })
     .then(res => res.json())
-    .then(console.log)
+    .then(user => dispatch({type: "SET_USER", payload: user}))
 }
 
 // fetch to backend for user login
@@ -36,6 +36,6 @@ export const submitLogin = (user) => {
         body: JSON.stringify(user),
     })
     .then(res => res.json())
-    .then(console.log)
+    .then(user => dispatch({type: "SET_USER", payload: user}))
 
 }
