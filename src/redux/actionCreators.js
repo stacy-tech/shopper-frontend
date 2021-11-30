@@ -23,7 +23,10 @@ export const submitSignup = (user) => {
         body: JSON.stringify(user),
     })
     .then(res => res.json())
-    .then(user => dispatch({type: "SET_USER", payload: user}))
+    .then(response => {
+        localStorage.token = response.token
+        dispatch({type: "SET_USER", payload: response.user})
+    })
 }
 
 // fetch to backend for user login
@@ -36,6 +39,9 @@ export const submitLogin = (user) => {
         body: JSON.stringify(user),
     })
     .then(res => res.json())
-    .then(user => dispatch({type: "SET_USER", payload: user}))
+    .then(response => {
+        localStorage.token = response.token
+        dispatch({type: "SET_USER", payload: response.user})
+    })
 
 }
