@@ -45,6 +45,7 @@ export const submitLogin = (user) => {
     })
 }
 
+// fetch to backend for autologin
 export const autoLogin = () => {
     return dispatch => fetch("http://localhost:3000/me" , {
         headers: {
