@@ -58,3 +58,11 @@ export const autoLogin = () => {
         dispatch({type: "SET_USER", payload: response.user})
     })
 }
+
+//  action for both clearing the localStorage and logout request
+export const logout = () => {
+    return dispatch => {
+        localStorage.clear()
+        dispatch({type: "LOGOUT"})
+    }
+}
