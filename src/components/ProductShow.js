@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { getProduct } from '../redux/actionCreators'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { cart } from '../redux/actionCreators'
+import { addToCart } from '../redux/actionCreators'
 
 
 function ProductShow({getProduct, title, imageUrl, description, price}){
@@ -18,8 +18,7 @@ function ProductShow({getProduct, title, imageUrl, description, price}){
         <p>{description}</p>
         <h3>${price}</h3>
         <Link to={`/products/${parseInt(routeId) + 1}`}>Next</Link>
-        {/* <Link to='/cart'>Cart</Link> */}
-        <button onClick={cart}>Cart</button>
+        <button onClick={addToCart}>ADD TO CART</button>
     </div>
 }
 

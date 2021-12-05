@@ -67,8 +67,21 @@ export const logout = () => {
     }
 }
 
-export const cart = () => {
+export const addToCart = () => {
     return dispatch => {
         dispatch({type: "ADD_TO_CART"})
+    }
+}
+
+// addToCart = (drawing, material) => {
+//     this.setState({
+//       cart: [...this.state.cart, drawing],
+//       specs: null
+//     })
+//   }
+
+export const cart = () => {
+    return dispatch => {
+        dispatch({type: "CART"})
     }
 }

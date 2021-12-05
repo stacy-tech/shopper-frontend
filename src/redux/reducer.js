@@ -24,6 +24,8 @@ export function reducer(state=initialState, action){
             return {...state, user: action.payload}
         case "LOGOUT":
             return {...state, user: {username: ""}}
+            case "ADD_TO_CART":
+                return {...state, selectedProduct: action.payload}
         default:
             return {...state}
         

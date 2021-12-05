@@ -1,5 +1,5 @@
 import './App.css';
-import { ProductIndex, ProductShow, Nav, Auth } from './components'
+import { ProductIndex, ProductShow, Nav, Auth} from './components'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
@@ -19,6 +19,7 @@ function App({user, autoLogin}) {
           <Route path="/products/:id"><ProductShow/></Route>
           <Route path="/products"><ProductIndex/></Route>
           <Route exact path="/"><ProductIndex/></Route>
+          <Route exact path="/cart"></Route>
         </Switch>:
         <Auth/>
       }
