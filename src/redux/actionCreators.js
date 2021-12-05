@@ -66,3 +66,9 @@ export const logout = () => {
         dispatch({type: "LOGOUT"})
     }
 }
+
+export const cart = () => {
+    return dispatch => {
+        dispatch({type: "ADD_TO_CART"})
+    }
+}

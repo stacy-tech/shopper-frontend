@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logout } from '../redux/actionCreators'
 
+
 function Nav({logout, username}){
     if(username){
         return <nav>

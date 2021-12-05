@@ -4,7 +4,8 @@ const initialState = {
         title: "",
         imageUrl: "",
         description: "",
-        price: 0
+        price: 0,
+        transactions: []
     },
     user: {
         username: ""
