@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logout } from '../redux/actionCreators'
-import { cart } from '../redux/actionCreators'
+// import { cart } from '../redux/actionCreators'
 import { Link } from 'react-router-dom'
 
 
@@ -12,8 +12,7 @@ function Nav({logout, username}){
         return <nav>
             <NavLink to="/products"><button>See All Items</button></NavLink>
             <button onClick={logout}>Logout</button>
-            {/* <button onClick={cart}>Cart</button> */}
-            <Link to='/cart'>Cart</Link>
+            <Link to='/cart'><button>Cart</button></Link>
         </nav>
    } else {
        return <nav>log in / register </nav>
@@ -22,4 +21,4 @@ function Nav({logout, username}){
 
 const mapStateToProps = (state) => ({username: state.user.username})
 
-export default connect(mapStateToProps, {logout, cart})(Nav)
+export default connect(mapStateToProps, {logout})(Nav)

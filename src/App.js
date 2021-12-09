@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 import { autoLogin } from './redux/actionCreators'
+import  TransactionCart from './components/TransactionCart'
 
 
 function App({user, autoLogin}) {
@@ -12,16 +13,17 @@ function App({user, autoLogin}) {
   
   return (
     <>
-      <h1>SHOPPER</h1>
+      <h1>S Collection</h1>
+      {/* <h2>S Collection is more than just a shopping destination. Join us!</h2> */}
       <Nav/>
       { user.username ?
         <Switch>
           <Route path="/products/:id"><ProductShow/></Route>
           <Route path="/products"><ProductIndex/></Route>
           <Route exact path="/"><ProductIndex/></Route>
-          <Route exact path="/cart"></Route>
+          <Route exact path="/cart"><TransactionCart/></Route>
         </Switch>:
-        <Auth/>
+        <Auth/>   
       }
     </>
   );

@@ -67,21 +67,31 @@ export const logout = () => {
     }
 }
 
-export const addToCart = () => {
-    return dispatch => {
-        dispatch({type: "ADD_TO_CART"})
-    }
+// adding a item to cart
+export const addToCart = (product_id) => {
+    console.log("hello")
+    return dispatch => fetch(`http://localhost:3000/transactions`, {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.token
+        },
+        body: JSON.stringify(product_id),
+    })
+    .then(res => res.json())
+    .then(product => dispatch({type: "ADD_TO_CART", payload: product})) 
+   
 }
 
-// addToCart = (drawing, material) => {
-//     this.setState({
-//       cart: [...this.state.cart, drawing],
-//       specs: null
-//     })
-//   }
 
-export const cart = () => {
-    return dispatch => {
-        dispatch({type: "CART"})
-    }
-}
+
+
+
+
+
+
+// export const cart = () => {
+//     return dispatch => {
+//         dispatch({type: "CART"})
+//     }
+// }
