@@ -9,7 +9,6 @@ function Home(){
             <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX30501913.jpg"></img>
         </div>
     )
-
 }
 
 export default Home

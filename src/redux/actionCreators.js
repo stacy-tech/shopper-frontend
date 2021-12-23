@@ -89,7 +89,7 @@ export const addToCart = (product_id) => {
    
 }
 
-
+// load an item into my cart for each user
 export const loadCart = () => dispatch => fetch('http://localhost:3000/transactions',{
     headers: {
         'Content-Type': 'application/json',
@@ -100,10 +100,10 @@ export const loadCart = () => dispatch => fetch('http://localhost:3000/transacti
 .then(user_transaction_items=> dispatch({type: 'LOAD_CART', payload: user_transaction_items}))
 .catch(handleError)
 
+
 // delete item from cart
 export const removeFromCart = (product_id)=> {
-    
-    // console.log("hello")
+
     return dispatch => fetch(`http://localhost:3000/transactions/${product_id}`, {
         method: 'DELETE',
         headers: {

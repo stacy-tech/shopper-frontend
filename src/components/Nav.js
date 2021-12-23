@@ -1,4 +1,3 @@
-// import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../redux/actionCreators";
 import { Link } from "react-router-dom";
