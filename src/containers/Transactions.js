@@ -1,18 +1,13 @@
-import { unstable_renderSubtreeIntoContainer } from 'react-dom'
-import { connect } from 'react-redux'
-import { TransactionCart } from '../components'
+// import { connect } from 'react-redux'
+// import { addToCart } from '../redux/actionCreators'
 
 
-function Transactions({transactions}){
-    return{
+// const Transactions = (props) => {
 
-    }
-
-}
+    
+// }
 
 
+// const mapStateToProps = (state) => ({transactions: state.selectedProduct.transactions})
 
-
-const mapStateToProps = (state) => ({transactions: state.selectedProduct.transactions})
-
-export default connect(mapStateToProps)(Transactions)
+// export default connect(mapStateToProps, {addToCart})(Transactions)

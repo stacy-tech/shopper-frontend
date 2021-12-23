@@ -13,17 +13,18 @@ function ProductShow({getProduct, title, imageUrl, description, price, addToCart
         getProduct(routeId)
     },   [getProduct, routeId])
 
-
+    // handles my onclick button 
     function handleClick(){
-        addToCart({product_id:routeId })
+        addToCart({product_id:routeId})
     }
+    
     return  <div className="show">
         <h1>{title}</h1>
         <img src={imageUrl} alt={title}/>
         <p>{description}</p>
         <h3>${price}</h3>
         <Link to={`/products/${parseInt(routeId) + 1}`}><button>Next</button></Link>
-        <button onClick={handleClick}>ADD TO CART</button>
+        <Link to='/cart' onClick={handleClick}><button>ADD TO CART</button></Link>
         {/* <Transactions/> */}
     </div>
 }

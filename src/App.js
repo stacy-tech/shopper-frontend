@@ -1,10 +1,12 @@
 import './App.css';
-import { ProductIndex, ProductShow, Nav, Auth} from './components'
+import { ProductIndex, ProductShow, Nav, Auth, Home} from './components'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 import { autoLogin } from './redux/actionCreators'
 import  TransactionCart from './components/TransactionCart'
+
+
 
 
 function App({user, autoLogin}) {
@@ -13,8 +15,7 @@ function App({user, autoLogin}) {
   
   return (
     <>
-      <h1>S Collection</h1>
-      {/* <h2>S Collection is more than just a shopping destination. Join us!</h2> */}
+     <Route exact path="/"><Home/></Route>
       <Nav/>
       { user.username ?
         <Switch>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { submitSignup, submitLogin } from '../redux/actionCreators'
 import { connect } from 'react-redux'
 
+
 function Auth(props){
     const [signup, setSignup] =  useState(false)
     const [first_name, setFirst_name] = useState("")
