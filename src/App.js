@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 import { autoLogin } from './redux/actionCreators'
-import  TransactionCart from './components/TransactionCart'
+import  TransactionCart from './containers/TransactionCart'
 
 
 
