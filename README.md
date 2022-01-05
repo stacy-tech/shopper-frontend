@@ -2,8 +2,8 @@
 
 Welcome to S Collection, a single page application designed to curate looks to our shoppers worldwide.
 
-https://youtu.be/Y4cj3W3g_58
 
+![This is an image](https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX30501913.jpg)
 
 
 ## Available Scripts
@@ -11,6 +11,10 @@ https://youtu.be/Y4cj3W3g_58
 In the project directory, you can run:
 
 ### `yarn start`
+
+
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
