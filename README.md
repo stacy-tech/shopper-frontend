@@ -4,9 +4,7 @@ Welcome to S Collection, a single page application designed to curate looks to o
 This Application had a Rails API for the backend and React JS with Redux Middleware for the front.
 
 
-
-
-
+![This is an image](https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX30501913.jpg)
 
 
 ## Installation
