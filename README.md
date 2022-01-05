@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# S Collection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to S Collection, a single page application designed to curate looks to our shoppers worldwide.
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 
 ## Available Scripts
 

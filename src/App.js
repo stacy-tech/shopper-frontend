@@ -15,13 +15,13 @@ function App({user, autoLogin}) {
   
   return (
     <>
-     <Route exact path="/"><Home/></Route>
+     <Route exact path="/" component={Home}/>
       <Nav/>
       { user.username ?
         <Switch>
           <Route path="/products/:id"><ProductShow/></Route>
           <Route path="/products"><ProductIndex/></Route>
-          <Route exact path="/"><ProductIndex/></Route>
+          <Route path="/"><ProductIndex/></Route>
           <Route exact path="/cart"><TransactionCart/></Route>
         </Switch>:
         <Auth/>   
