@@ -2,7 +2,11 @@
 
 Welcome to S Collection, a single page application designed to curate looks to our shoppers worldwide.
 
+<<<<<<< HEAD
 ![This is an video](https://youtu.be/Y4cj3W3g_58)
+=======
+video readme.mp4
+>>>>>>> ed4c088dd8014d1f236dee886686a2c72a4a44b8
 
 ## Available Scripts
 
