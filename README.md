@@ -2,7 +2,7 @@
 
 Welcome to S Collection, a single page application designed to curate looks to our shoppers worldwide.
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an video](video readme.mp4)
 
 ## Available Scripts
 
