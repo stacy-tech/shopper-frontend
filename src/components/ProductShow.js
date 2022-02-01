@@ -25,6 +25,8 @@ function ProductShow({getProduct, title, imageUrl, description, price, addToCart
         <h3>${price}</h3>
         <Link to={`/products/${parseInt(routeId) + 1}`}><button>Next</button></Link>
         <Link to='/cart' onClick={handleClick}><button>ADD TO CART</button></Link>
+
+        
         {/* <Transactions/> */}
     </div>
 }

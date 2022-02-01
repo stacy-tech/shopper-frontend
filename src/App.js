@@ -21,8 +21,8 @@ function App({user, autoLogin}) {
         <Switch>
           <Route path="/products/:id"><ProductShow/></Route>
           <Route path="/products"><ProductIndex/></Route>
-          <Route path="/"><ProductIndex/></Route>
           <Route exact path="/cart"><TransactionCart/></Route>
+          <Route path="/"><ProductIndex/></Route>
         </Switch>:
         <Auth/>   
       }
